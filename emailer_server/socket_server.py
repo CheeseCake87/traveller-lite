@@ -55,7 +55,7 @@ class SocketServer:
                     connection.sendall(b"NOTFOUND")
                     break
 
-            if "PROCESS" in decoded_data or "REPROCESS" in decoded_data:
+            if "PROCESS" in decoded_data:
 
                 self.process_job = Job.REPROCESS if "REPROCESS" in decoded_data else Job.PROCESS
 
